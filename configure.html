@@ -1,0 +1,96 @@
+<html>
+    <head>
+        <title>Tesla Puslapio Copy</title>
+        <link href="style.css" rel="stylesheet" type="text/css">
+    </head>
+
+    
+
+<body class="configure">
+    <header>
+
+        <div class="row">
+            <div class="logo">
+                <img src="assets/logo.gif">
+            </div>
+
+            
+
+
+
+        <ul class="main-nav">
+          <li><a href="index.html"> Home </a></li>
+          <li><a href=""> Services </a></li>
+          <li class="active"><a href="configure.html"> Configure </a></li>  
+          <li><a href=""> About </a></li>   
+        </ul>
+        </div>
+
+        <div class="engineselect">
+            <div class="engineselectimage">
+                <img id="currentmodely" src="assets/xwhite.png">
+            </div>
+        </div>
+
+        <div class="heroconfigure">
+            <h1>Model X</h1>
+
+            <p><input type="button" id="simplebutton" value="Black" onclick="pictureChange(1)"></p>
+            <p><input type="button" id="simplebutton" value="Blue" onclick="pictureChange(2)"></p>
+            <p><input type="button" id="simplebutton" value="Red" onclick="pictureChange(3)"></p>
+            <p><input type="button" id="simplebutton" value="Silver" onclick="pictureChange(4)"></p>
+            <p><input type="button" id="simplebutton" value="White" onclick="pictureChange(5)"></p>
+
+            <script>
+                function pictureChange(number)
+                 {
+                     if(number== 1)
+                     {
+                        document.getElementById("currentmodely").src="assets/xblack.png";
+                     }
+                     if(number== 2)
+                     {
+                        document.getElementById("currentmodely").src="assets/xblue.png";
+                     }
+                     if(number== 3)
+                     {
+                        document.getElementById("currentmodely").src="assets/xred.png";
+                     }
+                     if(number== 4)
+                     {
+                        document.getElementById("currentmodely").src="assets/xsilver.png";
+                     }
+                     if(number== 5)
+                     {
+                        document.getElementById("currentmodely").src="assets/xwhite.png";
+                     }
+                  
+                 }
+            </script>
+
+            
+
+
+            
+            </div>
+
+            
+
+
+        
+
+
+    </header>
+
+    
+
+        
+        
+</body>
+
+
+
+
+
+
+</html>
