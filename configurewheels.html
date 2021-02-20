@@ -1,0 +1,125 @@
+<html>
+  <head>
+    <title>Tesla Puslapio Copy</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body class="configure">
+    <header>
+      <div class="row">
+        <div class="logo">
+          <img src="assets/logo.gif" />
+        </div>
+
+        <ul class="main-nav">
+          <li><a href="index.html"> Home </a></li>
+          <li><a href=""> Services </a></li>
+          <li class="active"><a href="configurecolor.html"> Configure </a></li>
+          <li><a href=""> About </a></li>
+        </ul>
+      </div>
+    </header>
+
+    <div class="selectimage">
+      <img id="currentmodely" src="" />
+    </div>
+
+    <div class="select">
+      <h1>Model X</h1>
+      <p>Wheels</p>
+      <div class="configurewheels">
+          <a href="#" onclick="buttonClick(1)">
+            <img id="20Cyberstream" src="assets/wheels/20Cyberstream.png" />
+          </a>
+          <a href="#" onclick="buttonClick(2)">
+            <img id="22Turbine" src="assets/wheels/22Turbine.png" />
+          </a>
+      </div>
+      <div class="rataiText">
+        <h1 id="wheelText"></h1>
+        <a id="buttonnext" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="btn btn-one">Next</a>
+      </div>
+    </div>
+  </body>
+
+  <script>
+
+        //hide next button
+        document.getElementById("buttonnext").style.display = "none";
+
+        //sync selected color
+        if(localStorage.getItem("spalva") == "Juoda"){
+            document.getElementById("currentmodely").src = "assets/wheels/xblack00.jpg";
+        }
+        if(localStorage.getItem("spalva") == "Mėlyna"){
+            document.getElementById("currentmodely").src = "assets/wheels/xblue00.jpg";
+        }
+        if(localStorage.getItem("spalva") == "Raudona"){
+            document.getElementById("currentmodely").src = "assets/wheels/xred00.jpg";
+        }
+        if(localStorage.getItem("spalva") == "Sidabrinė"){
+            document.getElementById("currentmodely").src = "assets/wheels/xsilver00.jpg";
+        }
+        if(localStorage.getItem("spalva") == "Balta"){
+            document.getElementById("currentmodely").src = "assets/wheels/xwhite00.jpg";
+        }  
+
+        function buttonClick(number)
+        {
+            //unhide button
+            document.getElementById("buttonnext").style.display = "block";
+
+            if(number == 1 && localStorage.getItem("spalva") == "Juoda"){
+                document.getElementById("currentmodely").src = "assets/wheels/xblack00.jpg";
+                localStorage.setItem("ratai","Cyberstream");
+                document.getElementById("wheelText").innerHTML="Cyberstream";
+            }
+            if(number == 2 && localStorage.getItem("spalva") == "Juoda"){
+                document.getElementById("currentmodely").src = "assets/wheels/xblack20.jpg";
+                localStorage.setItem("ratai","Turbine");
+                document.getElementById("wheelText").innerHTML="Turbine";
+            }
+            if(number == 1 && localStorage.getItem("spalva") == "Mėlyna"){
+                document.getElementById("currentmodely").src = "assets/wheels/xblue00.jpg";
+                localStorage.setItem("ratai","Cyberstream");
+                document.getElementById("wheelText").innerHTML="Cyberstream";
+            }
+            if(number == 2 && localStorage.getItem("spalva") == "Mėlyna"){
+              document.getElementById("currentmodely").src = "assets/wheels/xblue20.jpg";
+                localStorage.setItem("ratai","Turbine");
+                document.getElementById("wheelText").innerHTML="Turbine";
+            }
+            if(number == 1 && localStorage.getItem("spalva") == "Raudona"){
+                document.getElementById("currentmodely").src = "assets/wheels/xred00.jpg";
+                localStorage.setItem("ratai","Cyberstream");
+                document.getElementById("wheelText").innerHTML="Cyberstream";
+            }
+            if(number == 2 && localStorage.getItem("spalva") == "Raudona"){
+                document.getElementById("currentmodely").src = "assets/wheels/xred20.jpg";
+                localStorage.setItem("ratai","Turbine");
+                document.getElementById("wheelText").innerHTML="Turbine";
+            }
+            if(number == 1 && localStorage.getItem("spalva") == "Sidabrinė"){
+                document.getElementById("currentmodely").src = "assets/wheels/xsilver00.jpg";
+                localStorage.setItem("ratai","Cyberstream");
+                document.getElementById("wheelText").innerHTML="Cyberstream";
+            }
+            if(number == 2 && localStorage.getItem("spalva") == "Sidabrinė"){
+                document.getElementById("currentmodely").src = "assets/wheels/xsilver20.jpg";
+                localStorage.setItem("ratai","Turbine");
+                document.getElementById("wheelText").innerHTML="Turbine";
+            }
+            if(number == 1 && localStorage.getItem("spalva") == "Balta"){
+                document.getElementById("currentmodely").src = "assets/wheels/xwhite00.jpg";
+                localStorage.setItem("ratai","Cyberstream");
+                document.getElementById("wheelText").innerHTML="Cyberstream";
+            }
+            if(number == 2 && localStorage.getItem("spalva") == "Balta"){
+                document.getElementById("currentmodely").src = "assets/wheels/xwhite20.jpg";
+                localStorage.setItem("ratai","Turbine");
+                document.getElementById("wheelText").innerHTML="Turbine";
+            }
+        }
+    
+  </script>
+</html>

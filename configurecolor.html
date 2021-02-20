@@ -14,14 +14,14 @@
         <ul class="main-nav">
           <li><a href="index.html"> Home </a></li>
           <li><a href=""> Services </a></li>
-          <li class="active"><a href="configure.html"> Configure </a></li>
+          <li class="active"><a href="configurecolor.html"> Configure </a></li>
           <li><a href=""> About </a></li>
         </ul>
       </div>
     </header>
 
     <div class="selectimage">
-      <img id="currentmodely" src="assets/xwhite.png" />
+      <img id="currentmodely" src="assets/wheels/xwhite00.jpg" />
     </div>
 
     <div class="select">
@@ -34,36 +34,44 @@
       <a href="#"class="butwhite" onclick="pictureChange(5)"></a>
       <div class="spalvaText">
         <h1 id="spalva"></h1>
+        <a id="buttonnext" href="configurewheels.html" class="btn btn-one">Next</a>
       </div>
     </div>
   </body>
 
   <script>
-    var spalva;
 
+    //hide next button
+    document.getElementById("buttonnext").style.display = "none";
+
+    //picture changer
     function pictureChange(number) {
+
+      //unhide next button
+      document.getElementById("buttonnext").style.display = "block";
+
       if (number == 1) {
-        document.getElementById("currentmodely").src = "assets/xblack.png";
+        document.getElementById("currentmodely").src = "assets/wheels/xblack00.jpg";
         document.getElementById("spalva").innerHTML="Juoda";
         localStorage.setItem("spalva","Juoda");
       }
       if (number == 2) {
-        document.getElementById("currentmodely").src = "assets/xblue.png";
+        document.getElementById("currentmodely").src = "assets/wheels/xblue00.jpg";
         document.getElementById("spalva").innerHTML="Mėlyna";
         localStorage.setItem("spalva","Mėlyna");
       }
       if (number == 3) {
-        document.getElementById("currentmodely").src = "assets/xred.png";
+        document.getElementById("currentmodely").src = "assets/wheels/xred00.jpg";
         document.getElementById("spalva").innerHTML="Raudona";
         localStorage.setItem("spalva","Raudona");
       }
       if (number == 4) {
-        document.getElementById("currentmodely").src = "assets/xsilver.png";
+        document.getElementById("currentmodely").src = "assets/wheels/xsilver00.jpg";
         document.getElementById("spalva").innerHTML="Sidabrinė";
         localStorage.setItem("spalva","Sidabrinė");
       }
       if (number == 5) {
-        document.getElementById("currentmodely").src = "assets/xwhite.png";
+        document.getElementById("currentmodely").src = "assets/wheels/xwhite00.jpg";
         document.getElementById("spalva").innerHTML="Balta";
         localStorage.setItem("spalva","Balta");
       }
