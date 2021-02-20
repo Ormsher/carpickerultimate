@@ -8,7 +8,7 @@
     <header>
       <div class="row">
         <div class="logo">
-          <img src="assets/" />
+          <img src="assets/logo.gif" />
         </div>
 
         <ul class="main-nav">
@@ -27,11 +27,12 @@
     <div class="select">
       <h1>Model X</h1>
       <p>Paint</p>
-      <a class="butblack" onclick="pictureChange(1)"></a>
-      <a class="butblue" onclick="pictureChange(2)"></a>
-      <a class="butred" onclick="pictureChange(3)"></a>
-      <a class="butsilver" onclick="pictureChange(4)"></a>
-      <a class="butwhite" onclick="pictureChange(5)"></a>
+      <a href="#"class="butblack" onclick="pictureChange(1)"></a>
+      <a href="#"class="butblue" onclick="pictureChange(2)"></a>
+      <a href="#"class="butred" onclick="pictureChange(3)"></a>
+      <a href="#"class="butsilver" onclick="pictureChange(4)"></a>
+      <a href="#"class="butwhite" onclick="pictureChange(5)"></a>
+      
     </div>
   </body>
 
@@ -45,15 +46,19 @@
       }
       if (number == 2) {
         document.getElementById("currentmodely").src = "assets/xblue.png";
+        spalva=2;
       }
       if (number == 3) {
         document.getElementById("currentmodely").src = "assets/xred.png";
+        spalva=3;
       }
       if (number == 4) {
         document.getElementById("currentmodely").src = "assets/xsilver.png";
+        spalva=4;
       }
       if (number == 5) {
         document.getElementById("currentmodely").src = "assets/xwhite.png";
+        spalva=5;
       }
     }
   </script>
