@@ -32,7 +32,9 @@
       <a href="#"class="butred" onclick="pictureChange(3)"></a>
       <a href="#"class="butsilver" onclick="pictureChange(4)"></a>
       <a href="#"class="butwhite" onclick="pictureChange(5)"></a>
-      
+      <div class="spalvaText">
+        <h1 id="spalva"></h1>
+      </div>
     </div>
   </body>
 
@@ -42,23 +44,28 @@
     function pictureChange(number) {
       if (number == 1) {
         document.getElementById("currentmodely").src = "assets/xblack.png";
-        spalva = 1;
+        document.getElementById("spalva").innerHTML="Juoda";
+        localStorage.setItem("spalva","Juoda");
       }
       if (number == 2) {
         document.getElementById("currentmodely").src = "assets/xblue.png";
-        spalva=2;
+        document.getElementById("spalva").innerHTML="Mėlyna";
+        localStorage.setItem("spalva","Mėlyna");
       }
       if (number == 3) {
         document.getElementById("currentmodely").src = "assets/xred.png";
-        spalva=3;
+        document.getElementById("spalva").innerHTML="Raudona";
+        localStorage.setItem("spalva","Raudona");
       }
       if (number == 4) {
         document.getElementById("currentmodely").src = "assets/xsilver.png";
-        spalva=4;
+        document.getElementById("spalva").innerHTML="Sidabrinė";
+        localStorage.setItem("spalva","Sidabrinė");
       }
       if (number == 5) {
         document.getElementById("currentmodely").src = "assets/xwhite.png";
-        spalva=5;
+        document.getElementById("spalva").innerHTML="Balta";
+        localStorage.setItem("spalva","Balta");
       }
     }
   </script>

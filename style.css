@@ -149,12 +149,12 @@ body {
   margin-top: 60px;
 }
 .butblack:focus{
-  border-style: dashed;
-  border-color:brown;
+  border-style:solid;
+  border:4px solid #3e6ae1;
 }
 
 .butblue {
-  background-color: blue;
+  background-color: darkblue;
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -165,8 +165,8 @@ body {
   margin-top: 120px;
 }
 .butblue:focus{
-  border-style: dashed;
-  border-color:brown;
+  border-style:solid;
+  border:4px solid #3e6ae1;
 }
 
 .butred {
@@ -181,8 +181,8 @@ body {
   margin-top: 180px;
 }
 .butred:focus{
-  border-style: dashed;
-  border-color:brown;
+  border-style:solid;
+  border:4px solid #3e6ae1;
 }
 
 .butsilver {
@@ -197,8 +197,8 @@ body {
   margin-top: 240px;
 }
 .butsilver:focus{
-  border-style: dashed;
-  border-color:brown;
+  border-style:solid;
+  border:4px solid #3e6ae1;
 }
 
 .butwhite {
@@ -213,6 +213,16 @@ body {
   margin-top: 300px;
 }
 .butwhite:focus{
-  border-style: dashed;
-  border-color:brown;
+  border-style:solid;
+  border:4px solid #3e6ae1;
+}
+.spalvaText{
+  position: fixed;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.spalvaText h1{
+  font-size:20px;
+  text-transform:none;
 }
