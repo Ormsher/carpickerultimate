@@ -105,11 +105,31 @@ body {
   height: 600px;
   /* border-style: dashed; */
   position: fixed;
+  top: 55%;
+  left: 85%;
+  transform: translate(-50%, -50%);
+  /* fade in effect */
+  animation: fadeIn ease 3s;
+  -webkit-animation: fadeIn ease 3s;
+  -moz-animation: fadeIn ease 3s;
+  -o-animation: fadeIn ease 3s;
+  -ms-animation: fadeIn ease 3s;
+}
+.selectTitle {
+  width: 300px;
+  height: 600px;
+  position: fixed;
   top: 50%;
   left: 85%;
   transform: translate(-50%, -50%);
 }
-
+.selectTitle h1 {
+  color: black;
+  text-transform: uppercase;
+  font-size: 60px;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+}
 .selectimage img {
   width: 800px;
   height: auto;
@@ -218,10 +238,10 @@ body {
 }
 .spalvaText{
   position: fixed;
-  top: 90%;
+  top: 80%;
   left: 50%;
   transform: translate(-50%, -50%);
-  
+ 
 }
 .spalvaText h1{
   font-size:20px;
@@ -237,7 +257,7 @@ body {
 
 .configurewheels {
   position: fixed;
-  top: 50%;
+  top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
 
@@ -262,7 +282,7 @@ body {
 
 .rataiText{
   position: fixed;
-  top: 75%;
+  top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -275,4 +295,50 @@ body {
 
 .rataiText a{
 
+}
+
+/* FADE IN EFFECTS */
+@keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-ms-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
 }
