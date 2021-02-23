@@ -1,18 +1,16 @@
 
 Funkciniai reikalavimai
--Automobilio surinkimas(3xVariklis, 5xSpalva, 2xRatlankiai, 3xInterjieras,  2xBako dydis,
--Smart Stuff: Bagažinė ir duris pačios atsidaro, Auto Parkingas, Autopilotas, Automatinis eismo juostu keitimas)
--Komplektacijų saugojimas
--Vertinimas
--Komentarai/Atsiliepimai (tik nusipirkus, kad nebūtų spam ir nesamonių)
--Apmokėjimas pinigais
+-Automobilio surinkimas(3xVariklis, 5xSpalva, 2xRatlankiai, 3xInterjieras,
+-Smart Stuff: Bagažinė ir duris pačios atsidaro, Auto Parkingas, Autopilotas, Automatinis eismo juostu keitimas) Basic/Premium/...
+-Komplektacijų saugojimas,bendrinti/dalintis
+-Vertinimas(emoji) - Komentarai/Atsiliepimai
+-Apmokėjimas bankiniu pavedimu
 -Apmokėjimas krypto valiutomis
 
 Nefunkciniai reikalavimai
 -Limituotas kiekis dalių(kiek galima gaut iš gamintojo)
--Atsiskaitymas tik populiariausia krypto valiuta
+-Atsiskaitymas tik 3 crypto valiut eth/bitcoin/dogecoin
 -Atsiskaitymas tik eurais/doleriais
--Vertinimas iki 10 emoji ??(gal paklaust ar tikrai nori)?? (skaičiai ar žvaigd)
-
+-Vertinimas iki 10 emoji
 
 
