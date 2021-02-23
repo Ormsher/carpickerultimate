@@ -1,0 +1,17 @@
+
+Funkciniai reikalavimai
+-Automobilio surinkimas(3xVariklis, 5xSpalva, 2xRatlankiai, 3xInterjieras, 1xAutomatinis parkavimas, 2xBako dydis )
+-Komplektacijų saugojimas
+-Vertinimas
+-Komentarai/Atsiliepimai (tik nusipirkus, kad nebūtų spam ir nesamonių)
+-Apmokėjimas pinigais
+-Apmokėjimas krypto valiutomis
+
+Nefunkciniai reikalavimai
+-Limituotas kiekis dalių(kiek galima gaut iš gamintojo)
+-Atsiskaitymas tik populiariausia krypto valiuta
+-Atsiskaitymas tik eurais/doleriais
+-Vertinimas iki 10 emoji ??(gal paklaust ar tikrai nori)?? (skaičiai ar žvaigd)
+
+
+
