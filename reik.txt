@@ -1,6 +1,7 @@
 
 Funkciniai reikalavimai
--Automobilio surinkimas(3xVariklis, 5xSpalva, 2xRatlankiai, 3xInterjieras, 1xAutomatinis parkavimas, 2xBako dydis )
+-Automobilio surinkimas(3xVariklis, 5xSpalva, 2xRatlankiai, 3xInterjieras,  2xBako dydis,
+-Smart Stuff: Bagažinė ir duris pačios atsidaro, Auto Parkingas, Autopilotas, Automatinis eismo juostu keitimas)
 -Komplektacijų saugojimas
 -Vertinimas
 -Komentarai/Atsiliepimai (tik nusipirkus, kad nebūtų spam ir nesamonių)
