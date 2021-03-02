@@ -16,7 +16,7 @@ Funkciniai reikalavimai
         Apple Carplay
         Android Auto
 
--Komplektacijų saugojimas,bendrinti/dalintis
+-Komplektacijų saugojimas ir bendrinti
 -Vertinimas(emoji) - Komentarai/Atsiliepimai
 -Apmokėjimas bankiniu pavedimu
 -Apmokėjimas krypto valiutomis
@@ -26,5 +26,21 @@ Nefunkciniai reikalavimai
 -Atsiskaitymas tik 3 crypto valiut eth/bitcoin/dogecoin
 -Atsiskaitymas tik eurais/doleriais
 -Vertinimas iki 10 emoji
+
+Užkrauna puslapį iki 1 sec, jeigu lečiau rodo, kad krauna
+Ekrane tik ""butini"" elementai atlikti pirkimui/rinkimui. Menu viršuj.
+Pasirinkimas paveiksliukais.
+
+
+//eskizo
+paleciu
+
+
+
+
+
+
+
+perziuret komentara/komplekta/
 
 
