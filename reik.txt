@@ -1,7 +1,21 @@
 
 Funkciniai reikalavimai
--Automobilio surinkimas(3xVariklis, 5xSpalva, 2xRatlankiai, 3xInterjieras,
--Smart Stuff: Bagažinė ir duris pačios atsidaro, Auto Parkingas, Autopilotas, Automatinis eismo juostu keitimas) Basic/Premium/...
+-Automobilio surinkimas(Variklis, Spalva, Ratlankiai, Interjieras),
+-Smart Stuff:
+
+        Komforto paketas:
+        Parkavimosi asistentas
+        4 zonų automatinis oro kondicionierius
+        Šildomas vairas
+
+        Inovacijos paketas:
+        Automatinis ilgų šviesų įjungimas ir išjungimas
+        Adaptyvūs LED žibintai
+        Projekcija ant priekinio stiklo
+        Vairavimo asistentas
+        Apple Carplay
+        Android Auto
+
 -Komplektacijų saugojimas,bendrinti/dalintis
 -Vertinimas(emoji) - Komentarai/Atsiliepimai
 -Apmokėjimas bankiniu pavedimu
