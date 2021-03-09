@@ -21,6 +21,7 @@ Funkciniai reikalavimai
 -Apmokėjimas bankiniu pavedimu
 -Apmokėjimas krypto valiutomis
 
+
 Nefunkciniai reikalavimai
 -Limituotas kiekis dalių(kiek galima gaut iš gamintojo)
 -Atsiskaitymas tik 3 crypto valiut eth/bitcoin/dogecoin
@@ -29,18 +30,44 @@ Nefunkciniai reikalavimai
 
 Užkrauna puslapį iki 1 sec, jeigu lečiau rodo, kad krauna
 Ekrane tik ""butini"" elementai atlikti pirkimui/rinkimui. Menu viršuj.
-Pasirinkimas paveiksliukais.
-
-
-//eskizo
-paleciu
+Pasirinkimas detalių paveiksliukais kur įmanoma.
 
 
 
 
+ŠIANDIEN/
+Galima pasirinkti iš skirtingu modeliu (keturiu)
+Susirinkus mašiną apytiklsė pristatymo data
+Pasiėmimas iš salono ar pristatymas į vietą
+Pasirinktas salonas rodomas mapse
+/
 
 
 
-perziuret komentara/komplekta/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+jeigu reik papildomu balu sakyt:
+baneris
+logo idomesnis
+dark/light mode
+iteracijos(tris alternatyvos is kuriu renkasi)
+login su facebook arba su kuo nori
 
 
