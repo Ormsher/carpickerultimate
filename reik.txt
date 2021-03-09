@@ -40,6 +40,7 @@ Galima pasirinkti iš skirtingu modeliu (keturiu)
 Susirinkus mašiną apytiklsė pristatymo data
 Pasiėmimas iš salono ar pristatymas į vietą
 Pasirinktas salonas rodomas mapse
+Garantinio forma
 /
 
 
