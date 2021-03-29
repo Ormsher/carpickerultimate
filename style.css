@@ -58,24 +58,61 @@ body {
   font-family: Roboto;
 }
 
-.hero {
+.bottomtext {
+  width: 500px;
+  height: 500px;
+  /* border-style: dashed; */
   position: fixed;
-  top: 75%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
-.hero h1 {
+.bottomtext h1 {
   color: white;
   text-transform: uppercase;
-  font-size: 60px;
+  font-size: 80px;
   text-align: center;
   font-family: "Roboto", sans-serif;
+
+  position: fixed;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-.button {
-  margin-top: 20px;
-  margin-left: 70px;
+.bottomtext1{
+  padding: 10px 30px;
+  font-family: "Roboto", sans-serif;
+  color: white;
+  text-transform: uppercase;
+  font-size: 25px;
+  text-decoration: none;
+  border-radius: 25px;
+  color: rgb(54, 51, 62);
+  background-color: rgba(236, 235, 238, 255);
+
+  position: fixed;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.bottomtext2{
+  padding: 10px 30px;
+  font-family: "Roboto", sans-serif;
+  color: white;
+  text-transform: uppercase;
+  font-size: 25px;
+  text-decoration: none;
+  border-radius: 25px;
+  color: rgba(236, 235, 238, 255);
+  background-color: rgb(54, 51, 62);
+
+  position: fixed;
+  top: 111%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .btn {
@@ -91,11 +128,6 @@ body {
 .btn-one {
   color: rgb(54, 51, 62);
   background-color: rgba(236, 235, 238, 255);
-}
-
-.btn-two {
-  color: rgba(236, 235, 238, 255);
-  background-color: rgb(54, 51, 62);
 }
 
 /* Configure color Puslapio Dalis */
