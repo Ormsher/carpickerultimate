@@ -133,6 +133,7 @@ body {
 /* Configure color Puslapio Dalis */
 
 .select {
+
   width: 300px;
   height: 600px;
   /* border-style: dashed; */
@@ -140,6 +141,7 @@ body {
   top: 55%;
   left: 85%;
   transform: translate(-50%, -50%);
+  border-style: dashed;
   /* fade in effect */
   animation: fadeIn ease 3s;
   -webkit-animation: fadeIn ease 3s;
@@ -328,6 +330,73 @@ body {
 .rataiText a{
 
 }
+/* INTERIOR */
+
+.intbutblack {
+  background-color: black;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  
+  position: fixed;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: 60px;
+}
+.intbutblack:focus{
+  border-style:solid;
+  border:4px solid #3e6ae1;
+}
+
+.intbutwhite {
+  background-color: whitesmoke;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  
+  position: fixed;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: 120px;
+}
+.intbutwhite:focus{
+  border-style:solid;
+  border:4px solid #3e6ae1;
+}
+
+.intbutwallnut {
+  background-color: wheat;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  
+  position: fixed;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: 180px;
+}
+.intbutwallnut:focus{
+  border-style:solid;
+  border:4px solid #3e6ae1;
+}
+
+.selectimagea img {
+  width: 80%;
+  height: 100%;
+  float: left;
+  position:absolute;
+  top: 70%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  border-style: dashed;
+  
+}
+
+
+
+
+
+
 
 /* FADE IN EFFECTS */
 @keyframes fadeIn {
