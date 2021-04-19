@@ -141,7 +141,6 @@ body {
   top: 55%;
   left: 85%;
   transform: translate(-50%, -50%);
-  border-style: dashed;
   /* fade in effect */
   animation: fadeIn ease 3s;
   -webkit-animation: fadeIn ease 3s;
@@ -381,14 +380,15 @@ body {
 }
 
 .selectimagea img {
-  width: 80%;
-  height: 100%;
+  width: 1300px;
+  height: auto;
   float: left;
-  position:absolute;
-  top: 70%;
-  left: 30%;
+  position:fixed;
+  top: 55%;
+  left: 40%;
   transform: translate(-50%, -50%);
-  border-style: dashed;
+  /* border-style: dashed; */
+  border-radius: 10%;
   
 }
 
