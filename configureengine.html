@@ -22,19 +22,19 @@
 
     
 
-    <div class="selectimagea">
-      <img id="currentmodely" src="assets/wheels/intblack.jpg" />
+    <div class="selectimageb">
+      <img id="currentmodely" src="assets/wheels/engblu.jpg" />
     </div>
     <div class="selectTitle"><h1>Model X</h1></div>
     <div class="select">
       <!-- <h1>Model X</h1> -->
-      <p>Interjieras</p>
-      <a href="#"class="intbutblack" onclick="pictureChange(1)"></a>
-      <a href="#"class="intbutwhite" onclick="pictureChange(2)"></a>
-      <a href="#"class="intbutwallnut" onclick="pictureChange(3)"></a>
-      <div class="spalvaText">
+      <p>Variklis</p>
+      <a href="#"class="engbutred" onclick="pictureChange(1)"></a>
+      <a href="#"class="engbutblue" onclick="pictureChange(2)"></a>
+      <a href="#"class="engbutgreen" onclick="pictureChange(3)"></a>
+      <div class="engText">
         <h1 id="spalva"></h1>
-        <a id="buttonnext" href="configureengine.html" class="btn btn-one">Next</a>
+        <a id="buttonnext" href="configurecomfort.html" class="btn btn-one">Next</a>
       </div>
     </div>
   </body>
@@ -51,19 +51,19 @@
       document.getElementById("buttonnext").style.display = "block";
 
       if (number == 1) {
-        document.getElementById("currentmodely").src = "assets/wheels/intblack.jpg";
-        document.getElementById("spalva").innerHTML="Juodas";
-        localStorage.setItem("interjieras","Juodas");
+        document.getElementById("currentmodely").src = "assets/wheels/engred.jpg";
+        document.getElementById("spalva").innerHTML="Raudona";
+        localStorage.setItem("variklis","Raudonas");
       }
       if (number == 2) {
-        document.getElementById("currentmodely").src = "assets/wheels/intwhite.jpg";
-        document.getElementById("spalva").innerHTML="Baltas";
-        localStorage.setItem("interjieras","Baltas");
+        document.getElementById("currentmodely").src = "assets/wheels/engblu.jpg";
+        document.getElementById("spalva").innerHTML="Mėlyna";
+        localStorage.setItem("variklis","Mėlynas");
       }
       if (number == 3) {
-        document.getElementById("currentmodely").src = "assets/wheels/intwalnut.jpg";
-        document.getElementById("spalva").innerHTML="Riešuto";
-        localStorage.setItem("interjieras","Riesuto");
+        document.getElementById("currentmodely").src = "assets/wheels/enggre.jpg";
+        document.getElementById("spalva").innerHTML="Žalia";
+        localStorage.setItem("variklis","Žalias");
       }
     }
   </script>
