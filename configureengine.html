@@ -33,7 +33,7 @@
       <a href="#"class="engbutblue" onclick="pictureChange(2)"></a>
       <a href="#"class="engbutgreen" onclick="pictureChange(3)"></a>
       <div class="engText">
-        <h1 id="spalva"></h1>
+        <h1 id="galia"></h1>
         <a id="buttonnext" href="configurecomfort.html" class="btn btn-one">Next</a>
       </div>
     </div>
@@ -52,17 +52,17 @@
 
       if (number == 1) {
         document.getElementById("currentmodely").src = "assets/wheels/engred.jpg";
-        document.getElementById("spalva").innerHTML="Raudona";
+        document.getElementById("galia").innerHTML="400HP";
         localStorage.setItem("variklis","Raudonas");
       }
       if (number == 2) {
         document.getElementById("currentmodely").src = "assets/wheels/engblu.jpg";
-        document.getElementById("spalva").innerHTML="Mėlyna";
+        document.getElementById("galia").innerHTML="300HP";
         localStorage.setItem("variklis","Mėlynas");
       }
       if (number == 3) {
         document.getElementById("currentmodely").src = "assets/wheels/enggre.jpg";
-        document.getElementById("spalva").innerHTML="Žalia";
+        document.getElementById("galia").innerHTML="500HP";
         localStorage.setItem("variklis","Žalias");
       }
     }
