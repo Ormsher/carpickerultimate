@@ -523,6 +523,16 @@ body {
 
 }
 
+.select1 h2{
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  text-align: center;
+  padding-top: 10px;
+}
+
+.paybuttons img{
+  padding-top: 7px;
+}
 .select2 li {
 
   font-size: 20px;
