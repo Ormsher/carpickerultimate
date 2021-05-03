@@ -1,0 +1,152 @@
+<html>
+
+<head>
+    <title>Sportlux</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body class="configure">
+    <header>
+        <div class="row">
+            <div class="logo">
+                <img src="passets/logo.gif" />
+            </div>
+
+            <ul class="main-nav">
+                <li><a href="index.html"> Home </a></li>
+                <li><a href=""> Services </a></li>
+                <li class="active"><a href="configurecolor.html"> Configure </a></li>
+                <li><a href=""> About </a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="selectimage">
+        <img id="currentmodely" src="assets/wheels/xwhite00.jpg" />
+    </div>
+    <div class="selectTitle">
+        <h1>Model X</h1>
+    </div>
+    <div class="select1">
+        <ul>
+            <li id="text1"></li>
+            <li id="text2"></li>
+            <li id="text3"></li>
+            <li id="text4"></li>
+            <li id="text5"></li>
+            <li id="text6"></li>
+        </ul>
+    </div>
+    </div>
+</body>
+
+<script>
+    //sync preferances
+    document.getElementById("text1").innerText = "Spalva: " + localStorage.getItem("spalva");
+    document.getElementById("text2").innerText = "Ratai: " + localStorage.getItem("ratai");
+    document.getElementById("text3").innerText = "Interjieras: " + localStorage.getItem("interjieras");
+    document.getElementById("text4").innerText = "Variklis: " + localStorage.getItem("variklis");
+    //window.alert(localStorage.getItem("komfortas"));
+    //window.alert(localStorage.getItem("inovacija"));
+
+
+    if (localStorage.getItem("komfortas") == "true") {
+        document.getElementById("text5").innerText = "Komforto paketas";
+    }
+    if (localStorage.getItem("inovacija") == "true") {
+        document.getElementById("text6").innerText = "Inovacijos paketas";
+    }
+
+
+    //sync color
+    if (
+        localStorage.getItem("ratai") == "Cyberstream" &&
+        localStorage.getItem("spalva") == "Juoda"
+    ) {
+        document.getElementById("currentmodely").src =
+            "assets/wheels/xblack00.jpg";
+        localStorage.setItem("ratai", "Cyberstream");
+        document.getElementById("wheelText").innerHTML = "Cyberstream";
+    }
+    if (
+        localStorage.getItem("ratai") == "Turbine" &&
+        localStorage.getItem("spalva") == "Juoda"
+    ) {
+        document.getElementById("currentmodely").src =
+            "assets/wheels/xblack20.jpg";
+        localStorage.setItem("ratai", "Turbine");
+        document.getElementById("wheelText").innerHTML = "Turbine";
+    }
+    if (
+        localStorage.getItem("ratai") == "Cyberstream" &&
+        localStorage.getItem("spalva") == "Mėlyna"
+    ) {
+        document.getElementById("currentmodely").src =
+            "assets/wheels/xblue00.jpg";
+        localStorage.setItem("ratai", "Cyberstream");
+        document.getElementById("wheelText").innerHTML = "Cyberstream";
+    }
+    if (
+        localStorage.getItem("ratai") == "Turbine" &&
+        localStorage.getItem("spalva") == "Mėlyna"
+    ) {
+        document.getElementById("currentmodely").src =
+            "assets/wheels/xblue20.jpg";
+        localStorage.setItem("ratai", "Turbine");
+        document.getElementById("wheelText").innerHTML = "Turbine";
+    }
+    if (
+        localStorage.getItem("ratai") == "Cyberstream" &&
+        localStorage.getItem("spalva") == "Raudona"
+    ) {
+        document.getElementById("currentmodely").src = "assets/wheels/xred00.jpg";
+        localStorage.setItem("ratai", "Cyberstream");
+        document.getElementById("wheelText").innerHTML = "Cyberstream";
+    }
+    if (
+        localStorage.getItem("ratai") == "Turbine" &&
+        localStorage.getItem("spalva") == "Raudona"
+    ) {
+        document.getElementById("currentmodely").src = "assets/wheels/xred20.jpg";
+        localStorage.setItem("ratai", "Turbine");
+        document.getElementById("wheelText").innerHTML = "Turbine";
+    }
+    if (
+        localStorage.getItem("ratai") == "Cyberstream" &&
+        localStorage.getItem("spalva") == "Sidabrinė"
+    ) {
+        document.getElementById("currentmodely").src =
+            "assets/wheels/xsilver00.jpg";
+        localStorage.setItem("ratai", "Cyberstream");
+        document.getElementById("wheelText").innerHTML = "Cyberstream";
+    }
+    if (
+        localStorage.getItem("ratai") == "Turbine" &&
+        localStorage.getItem("spalva") == "Sidabrinė"
+    ) {
+        document.getElementById("currentmodely").src =
+            "assets/wheels/xsilver20.jpg";
+        localStorage.setItem("ratai", "Turbine");
+        document.getElementById("wheelText").innerHTML = "Turbine";
+    }
+    if (
+        localStorage.getItem("ratai") == "Cyberstream" &&
+        localStorage.getItem("spalva") == "Balta"
+    ) {
+        document.getElementById("currentmodely").src =
+            "assets/wheels/xwhite00.jpg";
+        localStorage.setItem("ratai", "Cyberstream");
+        document.getElementById("wheelText").innerHTML = "Cyberstream";
+    }
+    if (
+        localStorage.getItem("ratai") == "Turbine" &&
+        localStorage.getItem("spalva") == "Balta"
+    ) {
+        document.getElementById("currentmodely").src =
+            "assets/wheels/xwhite20.jpg";
+        localStorage.setItem("ratai", "Turbine");
+        document.getElementById("wheelText").innerHTML = "Turbine";
+    }
+</script>
+
+</html>
