@@ -151,17 +151,8 @@
     }
 
     function storestuff() {
-      if ((document.getElementById("vehicle1").checked = true)) {
-        localStorage.setItem("comfort", "TRUE");
-      } else {
-        localStorage.setItem("comfort", "FALSE");
-      }
-
-      if ((document.getElementById("vehicle2").checked = true)) {
-        localStorage.setItem("inovation", "TRUE");
-      } else {
-        localStorage.setItem("inovation", "FALSE");
-      }
+      localStorage.setItem("comfort", document.getElementById("vehicle1").checked);
+      localStorage.setItem("inovation", document.getElementById("vehicle2").checked);
     }
   </script>
 </html>
