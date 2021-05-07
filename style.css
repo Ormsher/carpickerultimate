@@ -681,7 +681,11 @@ body {
   font-family: "Roboto", sans-serif;
   font-size: 20px;
 }
+.comment {
+  padding-top: 300px;
+  padding-left: 750px;
 
+}
 
 /* FADE IN EFFECTS */
 @keyframes fadeIn {
