@@ -35,6 +35,7 @@
             <li id="text4"></li>
             <li id="text5"></li>
             <li id="text6"></li>
+            <li id="text7"></li>
         </ul>
         <h2>Atsiskaitymo būdai:</h2>
     <div class="paybuttons">
@@ -47,10 +48,17 @@
 </body>
 
 <script>
+    var sk = parseInt(localStorage.getItem("spalvaKaina"));
+    var rk = parseInt(localStorage.getItem("rataiKaina"));
+    var ik = parseInt(localStorage.getItem("interjerasKaina"));
+    var vk = parseInt(localStorage.getItem("variklisKaina"));
+    var ck = parseInt(localStorage.getItem("comfortKaina"));
+    var suma = sk+rk+ik+vk+ck;
+    document.getElementById("text7").innerText = "Kaina: "+ suma + " €";
     //sync preferances
     document.getElementById("text1").innerText = "Spalva: " + localStorage.getItem("spalva");
     document.getElementById("text2").innerText = "Ratai: " + localStorage.getItem("ratai");
-    document.getElementById("text3").innerText = "Interjieras: " + localStorage.getItem("interjieras");
+    document.getElementById("text3").innerText = "interjeras: " + localStorage.getItem("interjeras");
     document.getElementById("text4").innerText = "Variklis: " + localStorage.getItem("variklis");
     //window.alert(localStorage.getItem("komfortas"));
     //window.alert(localStorage.getItem("inovacija"));

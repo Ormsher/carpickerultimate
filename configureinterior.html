@@ -28,12 +28,13 @@
     <div class="selectTitle"><h1>Model X</h1></div>
     <div class="select">
       <!-- <h1>Model X</h1> -->
-      <p>Interjieras</p>
+      <p>interjeras</p>
       <a href="#"class="intbutblack" onclick="pictureChange(1)"></a>
       <a href="#"class="intbutwhite" onclick="pictureChange(2)"></a>
       <a href="#"class="intbutwallnut" onclick="pictureChange(3)"></a>
       <div class="engText">
         <h1 id="spalva"></h1>
+        <h1 id="interjerasKaina"></h1>
         <a id="buttonnext" href="configureengine.html" class="btn btn-one">TOLIAU</a>
       </div>
     </div>
@@ -53,17 +54,23 @@
       if (number == 1) {
         document.getElementById("currentmodely").src = "assets/wheels/intblack.jpg";
         document.getElementById("spalva").innerHTML="Juodas";
-        localStorage.setItem("interjieras","Juodas");
+        localStorage.setItem("interjeras","Juodas");
+        localStorage.setItem("interjerasKaina",6700);
+        document.getElementById("interjerasKaina").innerHTML=6700 + " €";
       }
       if (number == 2) {
         document.getElementById("currentmodely").src = "assets/wheels/intwhite.jpg";
         document.getElementById("spalva").innerHTML="Baltas";
-        localStorage.setItem("interjieras","Baltas");
+        localStorage.setItem("interjeras","Baltas");
+        localStorage.setItem("interjerasKaina",7000);
+        document.getElementById("interjerasKaina").innerHTML=7000 + " €";
       }
       if (number == 3) {
         document.getElementById("currentmodely").src = "assets/wheels/intwalnut.jpg";
         document.getElementById("spalva").innerHTML="Riešuto";
-        localStorage.setItem("interjieras","Riešuto");
+        localStorage.setItem("interjeras","Riešuto");
+        localStorage.setItem("interjerasKaina",7500);
+        document.getElementById("interjerasKaina").innerHTML=7500 + " €";
       }
     }
   </script>

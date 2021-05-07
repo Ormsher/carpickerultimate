@@ -34,6 +34,7 @@
       <a href="#"class="engbutgreen" onclick="pictureChange(3)"></a>
       <div class="engText">
         <h1 id="galia"></h1>
+        <h1 id="variklisKaina"></h1>
         <a id="buttonnext" href="configurecomfort.html" class="btn btn-one">TOLIAU</a>
       </div>
     </div>
@@ -54,16 +55,22 @@
         document.getElementById("currentmodely").src = "assets/wheels/engred.jpg";
         document.getElementById("galia").innerHTML="400HP";
         localStorage.setItem("variklis","Raudonas");
+        localStorage.setItem("variklisKaina",20000);
+        document.getElementById("variklisKaina").innerHTML=20000 + " €";
       }
       if (number == 2) {
         document.getElementById("currentmodely").src = "assets/wheels/engblu.jpg";
         document.getElementById("galia").innerHTML="300HP";
         localStorage.setItem("variklis","Mėlynas");
+        localStorage.setItem("variklisKaina",17000);
+        document.getElementById("variklisKaina").innerHTML=17000 + " €";
       }
       if (number == 3) {
         document.getElementById("currentmodely").src = "assets/wheels/enggre.jpg";
         document.getElementById("galia").innerHTML="500HP";
         localStorage.setItem("variklis","Žalias");
+        localStorage.setItem("variklisKaina",25000);
+        document.getElementById("variklisKaina").innerHTML=25000 + " €";
       }
     }
   </script>

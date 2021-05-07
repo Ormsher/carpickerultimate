@@ -1,6 +1,6 @@
 
 Funkciniai reikalavimai
--Automobilio surinkimas(Variklis, Spalva, Ratlankiai, Interjieras),
+-Automobilio surinkimas(Variklis, Spalva, Ratlankiai, interjeras),
 -Smart Stuff:
 
         Komforto paketas:

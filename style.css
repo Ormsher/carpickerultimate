@@ -283,6 +283,7 @@ body {
 .spalvaText h1{
   font-size:20px;
   text-transform:none;
+  padding-top: 10px;
 }
 
 .spalvaText a {
@@ -327,7 +328,7 @@ body {
 .rataiText h1 {
   font-size:20px;
   text-transform:none;
-  padding-bottom: 30px;
+  padding-bottom: 10px;
 }
 
 /* INTERIOR */
@@ -480,7 +481,7 @@ body {
   background-color: #3e6ae1;
 
   position: fixed;
-  top: 60%;
+  top: 65%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -562,7 +563,7 @@ body {
   font-family: "Roboto", sans-serif;
   position: fixed;
   left: 50%;
-  top: 47%;
+  top: 52%;
   transform: translate(-50%, -50%);
   
 
