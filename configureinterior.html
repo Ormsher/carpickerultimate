@@ -12,10 +12,11 @@
         </div>
 
         <ul class="main-nav">
-          <li><a href="index.html"> Home </a></li>
-          <li><a href=""> Services </a></li>
-          <li class="active"><a href="configurecolor.html"> Configure </a></li>
-          <li><a href=""> About </a></li>
+          <li ><a href="index.html"> Pradžia </a></li>
+              <li><a href=""> Apie mus </a></li>
+              <li class="active"><a href="configurecolor.html"> Užsakymas </a></li>
+              <li ><a id="login" href="loginpage.html"></a></li>
+              <li><a id="logout" href="#" onclick="logout()"></a></li>
         </ul>
       </div>
     </header>
@@ -41,6 +42,22 @@
   </body>
 
   <script>
+    //login system
+    if(localStorage.getItem("loginas")==null){
+      document.getElementById("login").innerText = "Prisijungti";
+      document.getElementById("logout").style.display = "none";
+     } 
+     else{
+      document.getElementById("login").innerText = "Sveiki, " +localStorage.getItem("loginas");
+      document.getElementById("login").href="#";
+      document.getElementById("logout").style.display = "block";
+      document.getElementById("logout").innerText = "Atsijungti";
+     }
+
+     function logout(){
+      localStorage.removeItem("loginas");
+      document.location.href = "index.html";
+     }
 
     //hide next button
     document.getElementById("buttonnext").style.display = "none";

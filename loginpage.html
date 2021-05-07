@@ -111,10 +111,10 @@ input[type=submit]:hover {
         <img src="passets/logo.gif" />
       </div>
       <ul class="main-nav">
-        <li><a href="index.html"> Home </a></li>
-        <li><a href=""> Services </a></li>
-        <li><a href="configurecolor.html"> Configure </a></li>
-        <li class="active"><a href="loginpage.html"> Login </a></li>
+        <li ><a href="index.html"> Pradžia </a></li>
+        <li><a href=""> Apie mus </a></li>
+        <li ><a href="configurecolor.html"> Užsakymas </a></li>
+        <li class="active"><a id="login" href="loginpage.html"></a></li>
       </ul>
     </div>
     </header>
@@ -135,13 +135,25 @@ input[type=submit]:hover {
       </div>
 
       <div class="col">
-        <input type="text" name="username" placeholder="Vardas" required>
+        <input id="user" type="text" name="username" placeholder="Vardas" required >
         <input type="password" name="password" placeholder="Slaptažodis" required>
-        <a href="index.html"><input type="submit" value="Prisijungti"></a>
+        <input type="submit" value="Prisijungti" onclick="adminCheck()">
       </div>
       
     </div>
 </div>
-
+<script>
+  if(localStorage.getItem("loginas")==null){
+      document.getElementById("login").innerText = "Prisijungti";
+     } 
+  function adminCheck(){
+    if(document.getElementById("user").value=="admin")
+    document.location.href = "tracking.html";
+  else{
+    localStorage.setItem("loginas",document.getElementById("user").value);
+    document.location.href = "index.html";
+  }
+}
+</script>
 </body>
 </html>

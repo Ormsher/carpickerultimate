@@ -11,20 +11,38 @@
           <img src="passets/logo.gif" />
         </div>
         <ul class="main-nav">
-          <li class="active"><a href=""> Home </a></li>
-          <li><a href=""> Services </a></li>
-          <li><a href="configurecolor.html"> Configure </a></li>
-          <li><a href="loginpage.html"> Login </a></li>
+          <li class="active"><a href="index.html"> Pradžia </a></li>
+          <li><a href=""> Apie mus </a></li>
+          <li><a href="configurecolor.html"> Užsakymas </a></li>
+          <li ><a id="login" href="loginpage.html"></a></li>
+          <li><a id="logout" href="#" onclick="logout()"></a></li>
         </ul>
       </div>
 
 
       <div class="bottomtext">
         <h1>Sportlux</h1>
-        <a href="configurecolor.html" class="bottomtext1">Configure</a>
-        <a href="" class="bottomtext2">Reviews</a>
+        <a href="configurecolor.html" class="bottomtext1">Užsakymas</a>
+        <a href="" class="bottomtext2">Atsiliepimai</a>
       </div>
 
     </header>
+    <script>
+     if(localStorage.getItem("loginas")==null){
+      document.getElementById("login").innerText = "Prisijungti";
+      document.getElementById("logout").style.display = "none";
+     } 
+     else{
+      document.getElementById("login").innerText = "Sveiki, " +localStorage.getItem("loginas");
+      document.getElementById("login").href="#";
+      document.getElementById("logout").style.display = "block";
+      document.getElementById("logout").innerText = "Atsijungti";
+     }
+
+     function logout(){
+      localStorage.removeItem("loginas");
+      document.location.href = "index.html";
+     }
+    </script>
   </body>
 </html>
