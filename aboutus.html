@@ -1,0 +1,62 @@
+<html>
+  <head>
+    <title>SPORTLUX</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body class="index">
+      
+    <header>
+      <div class="row">
+        <div class="logo">
+          <img src="passets/logo.gif" />
+        </div>
+        <ul class="main-nav">
+          <li class="active"><a href="index.html"> Pradžia </a></li>
+          <li><a href=""> Apie mus </a></li>
+          <li><a href="configurecolor.html"> Užsakymas </a></li>
+          <li ><a id="login" href="loginpage.html"></a></li>
+          <li><a id="logout" href="#" onclick="logout()"></a></li>
+        </ul>
+      </div>
+    </header>
+
+    <div class="aboutustext">
+        <h1>Tesla’s mission is to accelerate the world’s transition to sustainable energy</h1>
+        <p>Tesla was founded in 2003 by a group of engineers who wanted to prove that people didn’t need to compromise to drive electric – that electric vehicles can be better, quicker and more fun to drive than gasoline cars.</p>
+    </div>
+
+    <div class="vilniusaboutus">
+
+      <iframe width="325" height="250" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=25.306795477736163%2C54.677730958940586%2C25.309306025374102%2C54.67876531977763&amp;layer=mapnik&amp;marker=54.67824814265312%2C25.30805075155513" style="border: 1px solid black"></iframe><br/><small></small>
+
+    </div>
+    <div class="kaunasaboutus">
+
+      <iframe width="325" height="250" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=23.919392824172977%2C54.89787443359119%2C23.924413919448853%2C54.89993189684749&amp;layer=mapnik&amp;marker=54.89890317835933%2C23.921903371810913" style="border: 1px solid black"></iframe><br/><small></small>
+    
+    </div>
+    
+
+
+
+
+  </body>
+
+  <script>
+    if(localStorage.getItem("loginas")==null){
+     document.getElementById("login").innerText = "Prisijungti";
+     document.getElementById("logout").style.display = "none";
+    } 
+    else{
+     document.getElementById("login").innerText = "Sveiki, " +localStorage.getItem("loginas");
+     document.getElementById("login").href="#";
+     document.getElementById("logout").style.display = "block";
+     document.getElementById("logout").innerText = "Atsijungti";
+    }
+    function logout(){
+     localStorage.removeItem("loginas");
+     document.location.href = "index.html";
+    }
+   </script>
+</html>

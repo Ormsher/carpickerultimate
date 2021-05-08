@@ -687,6 +687,52 @@ body {
 
 }
 
+
+/* ABOUT US */
+
+.aboutustext {
+  position: fixed;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-style: dashed;
+  font-family: "Roboto", sans-serif;
+}
+
+.aboutustext h1 {
+  text-align: center;
+  padding-bottom: 10px;
+  font-size: 30px;
+}
+
+.aboutustext p {
+  text-align: center;
+  font-size: 20px;
+}
+
+.vilniusaboutus {
+  position: fixed;
+  top: 55%;
+  left: 75%;
+  transform: translate(-50%, -50%);
+  border-style: dashed;
+  font-family: "Roboto", sans-serif;
+}
+
+.kaunasaboutus {
+  position: fixed;
+  top: 55%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+  border-style: dashed;
+  font-family: "Roboto", sans-serif;
+}
+
+
+
+
+
+
 /* FADE IN EFFECTS */
 @keyframes fadeIn {
   0% {
