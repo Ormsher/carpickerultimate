@@ -1,0 +1,70 @@
+<html>
+  <head>
+    <title>SPORTLUX</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body class="abus">
+      
+    <header>
+      <div class="row">
+        <div class="logo">
+          <img src="passets/logo.gif" />
+        </div>
+        <ul class="main-nav">
+          <li ><a href="index.html"> Pradžia </a></li>
+          <li class="active"><a href=""> Apie mus </a></li>
+          <li><a href="configurecolor.html"> Užsakymas </a></li>
+          <li ><a id="login" href="loginpage.html"></a></li>
+          <li><a id="logout" href="#" onclick="logout()"></a></li>
+        </ul>
+      </div>
+    </header>
+
+    <div class="warranty">
+
+      <h1>Garantinio forma</h1>
+
+      <p>Modelis</p>
+      <select name="cars" id="cars">
+        <option value="volvo">Model X</option>
+        <option value="saab">Model S</option>
+      </select>
+
+      <p>Pirkimo data</p>
+      <input type="date" id="birthday" name="birthday">
+
+      <p>Aprašykite gedimą/problemą</p>
+      <textarea id="w3review" name="w3review" rows="4" cols="70"></textarea>
+
+    </div>
+
+    <div class="warrantysubmit">
+      <a id="buttonnext" href="index.html" class="btn btn-one">išsiųsti</a>
+    </div>
+
+
+
+
+
+
+
+  </body>
+
+  <script>
+    if(localStorage.getItem("loginas")==null){
+     document.getElementById("login").innerText = "Prisijungti";
+     document.getElementById("logout").style.display = "none";
+    } 
+    else{
+     document.getElementById("login").innerText = "Sveiki, " +localStorage.getItem("loginas");
+     document.getElementById("login").href="#";
+     document.getElementById("logout").style.display = "block";
+     document.getElementById("logout").innerText = "Atsijungti";
+    }
+    function logout(){
+     localStorage.removeItem("loginas");
+     document.location.href = "index.html";
+    }
+   </script>
+</html>

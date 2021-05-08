@@ -769,6 +769,63 @@ body {
   text-align: left;
 }
 
+/* WARRANTY */
+
+.warranty {
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* border-style: dashed; */
+  font-family: "Roboto", sans-serif;
+}
+
+.warranty h1 {
+  font-size: 40px;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.warranty p {
+  font-size: 20px;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  
+}
+.warranty input {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  font-size: 20px;
+  width: 200px;
+  height: 30px;
+  font-family: "Roboto", sans-serif;
+}
+
+.warranty select {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  font-size: 20px;
+  width: 200px;
+  height: 30px;
+  font-family: "Roboto", sans-serif;
+}
+
+.warranty textarea {
+  font-size: 20px;
+  font-family: "Roboto", sans-serif;
+}
+
+.warrantysubmit{
+  position: fixed;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 
 
 
