@@ -690,12 +690,19 @@ body {
 
 /* ABOUT US */
 
+.abus {
+  background-image: linear-gradient(rgba(248, 247, 247, 0.5), rgba(248, 247, 247, 0.5)),url(assets/ms-homepage-desktop.jpg);
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+}
+
 .aboutustext {
   position: fixed;
   top: 25%;
   left: 50%;
   transform: translate(-50%, -50%);
-  border-style: dashed;
+  /* border-style: dashed; */
   font-family: "Roboto", sans-serif;
 }
 
@@ -712,22 +719,55 @@ body {
 
 .vilniusaboutus {
   position: fixed;
-  top: 55%;
+  top: 60%;
   left: 75%;
   transform: translate(-50%, -50%);
-  border-style: dashed;
+  /* border-style: dashed; */
   font-family: "Roboto", sans-serif;
+}
+
+.vilniusaboutus li {
+  font-size: 15px;
+  text-align: left;
+}
+
+.vilniusaboutus h1{
+  font-size: 20px;
+  text-align: center;
+}
+
+.vilniusaboutus p{
+  font-size: 15px;
+  text-align: center;
+  padding-bottom: 5px;
+  padding-top: 5px;
 }
 
 .kaunasaboutus {
   position: fixed;
-  top: 55%;
+  top: 60%;
   left: 25%;
   transform: translate(-50%, -50%);
-  border-style: dashed;
+  /* border-style: dashed; */
   font-family: "Roboto", sans-serif;
 }
 
+.kaunasaboutus h1{
+  font-size: 20px;
+  text-align: center;
+}
+
+.kaunasaboutus p{
+  font-size: 15px;
+  text-align: center;
+  padding-bottom: 5px;
+  padding-top: 5px;
+}
+
+.kaunasaboutus li {
+  font-size: 15px;
+  text-align: left;
+}
 
 
 
