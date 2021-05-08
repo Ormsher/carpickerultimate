@@ -16,6 +16,7 @@
           <li><a href="aboutus.html"> Apie mus </a></li>
           <li class="active"><a href="configurecolor.html"> Užsakymas </a></li>
           <li ><a id="login" href="loginpage.html"></a></li>
+          <li ><a id="warranty" href="warranty.html"></a></li>
           <li><a id="logout" href="#" onclick="logout()"></a></li>
         </ul>
       </div>
@@ -46,12 +47,15 @@
     if(localStorage.getItem("loginas")==null){
       document.getElementById("login").innerText = "Prisijungti";
       document.getElementById("logout").style.display = "none";
+      document.getElementById("warranty").style.display = "none";
      } 
      else{
       document.getElementById("login").innerText = "Sveiki, " +localStorage.getItem("loginas");
       document.getElementById("login").href="#";
       document.getElementById("logout").style.display = "block";
       document.getElementById("logout").innerText = "Atsijungti";
+      document.getElementById("warranty").innerText = "Garantija";
+      document.getElementById("warranty").style.display = "block";
      }
 
      function logout(){
