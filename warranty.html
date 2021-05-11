@@ -41,18 +41,18 @@
     </div>
 
     <div class="warrantysubmit">
-      <a id="buttonnext" href="index.html" class="btn btn-one">išsiųsti</a>
+      <a id="buttonnext" href="index.html" class="btn btn-one" onclick="alertUser()">išsiųsti</a>
     </div>
-
-
-
-
-
-
 
   </body>
 
   <script>
+
+    function alertUser()
+    {
+      alert("Užpildyta forma išsiųsta");
+    }
+
     //login system
     if(localStorage.getItem("loginas")==null){
       document.getElementById("login").innerText = "Prisijungti";
