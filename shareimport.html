@@ -1,0 +1,177 @@
+<html>
+  <head>
+    <title>SPORTLUX</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body class="abus">
+      
+    <header>
+      <div class="row">
+        <div class="logo">
+          <img src="assets/SPORTLUX_2.2.gif" />
+        </div>
+        <ul class="main-nav">
+          <li ><a href="index.html"> Pradžia </a></li>
+          <li class="active"><a href="aboutus.html"> Apie mus </a></li>
+          <li ><a href="configurecolor.html"> Užsakymas </a></li>
+          <li ><a id="login" href="loginpage.html"></a></li>
+          <li ><a id="warranty" href="warranty.html"></a></li>
+          <li><a id="logout" href="#" onclick="logout()"></a></li>
+        </ul>
+      </div>
+    </header>
+
+    <div class="shareimport">
+        <h1>Komplektacijos importavimas</h1>
+        <p>Įveskite komplektacijos kodą</p>
+        <input type="text" id="komplektacijaField" name="fname"><br><br>
+        <a id="buttonnext" href="configureprice.html" class="btn btn-one" onclick="readField()">Komplektuoti</a>
+    </div>
+
+
+
+
+  </body>
+
+  <script>
+
+    function readField()
+    {
+      var fullstring = document.getElementById("komplektacijaField").value;
+      var color, wheels, interior, engine, inovation, comfort;
+      color = fullstring[0] + fullstring[1];
+      wheels = fullstring[2] + fullstring[3];
+      interior = fullstring[4] + fullstring[5];
+      engine = fullstring[6] + fullstring[7];
+      inovation = fullstring[8] + fullstring[9];
+      comfort = fullstring[10] + fullstring[11];
+
+      //colors
+      if(color == "JU")
+      {
+        localStorage.setItem("spalva", "Juoda");
+      }
+      else if(color == "ME")
+      {
+        localStorage.setItem("spalva", "Mėlyna");
+      }
+      else if(color == "RA")
+      {
+        localStorage.setItem("spalva", "Raudona");
+      }
+      else if(color == "SI")
+      {
+        localStorage.setItem("spalva", "Sidabrinė");
+      }
+      else if(color == "BA")
+      {
+        localStorage.setItem("spalva", "Balta");
+      }
+      else
+      {
+        alert("RIP COLOR");
+      }
+
+      //WHEELS
+      if(wheels == "CY")
+      {
+        localStorage.setItem("ratai", "Cyberstream");
+      }
+      else if(wheels == "TU")
+      {
+        localStorage.setItem("ratai", "Turbine");
+      }
+      else
+      {
+        alert("RIP RATAI");
+      }
+
+      //INTERIOR
+      if(interior == "JU")
+      {
+        localStorage.setItem("interjeras", "Juodas");
+      }
+      else if(interior == "BA")
+      {
+        localStorage.setItem("interjeras", "Baltas");
+      }
+      else if(interior == "RI")
+      {
+        localStorage.setItem("interjeras", "Riešuto");
+      }
+      else
+      {
+        alert("RIP INTERJIERAS");
+      }
+
+      //ENGINE
+      if(engine == "ME")
+      {
+        localStorage.setItem("variklis", "Mėlynas");
+      }
+      else if(engine == "RA")
+      {
+        localStorage.setItem("variklis", "Raudonas");
+      }
+      else if(engine == "ZA")
+      {
+        localStorage.setItem("variklis", "Žalias");
+      }
+      else
+      {
+        alert("RIP VARIKLIS");
+      }
+
+      //INOVATION
+      if(inovation == "TR")
+      {
+        localStorage.setItem("inovation", true);
+      }
+      else
+      {
+        localStorage.setItem("inovation", false);
+      }
+      
+
+      //COMFORT
+      if(comfort == "TR")
+      {
+        localStorage.setItem("comfort", true);
+      }
+      else
+      {
+        localStorage.setItem("comfort", false);
+      }
+
+      //RACYJUMETRTR
+      //JUTUJUMETRTR
+    }
+    
+
+
+
+
+
+
+  //login system
+  if(localStorage.getItem("loginas")==null){
+      document.getElementById("login").innerText = "Prisijungti";
+      document.getElementById("logout").style.display = "none";
+      document.getElementById("warranty").style.display = "none";
+     } 
+     else{
+      document.getElementById("login").innerText = "Sveiki, " +localStorage.getItem("loginas");
+      document.getElementById("login").href="#";
+      document.getElementById("logout").style.display = "block";
+      document.getElementById("logout").innerText = "Atsijungti";
+      document.getElementById("warranty").innerText = "Garantija";
+      document.getElementById("warranty").style.display = "block";
+     }
+
+     function logout(){
+      localStorage.removeItem("loginas");
+      document.location.href = "index.html";
+     }
+   </script>
+</html>
