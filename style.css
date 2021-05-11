@@ -664,16 +664,21 @@ body {
 
 /* Tracking page */
 .adminpage {
-  float:right;
-  list-style: none;
-  margin-top: 45px;
+  position: fixed;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   color: rgb(54, 51, 62);
   text-decoration: none;
-  padding: 5px 20px;
+  /* padding: 5px 20px; */
   font-family: "Roboto", sans-serif;
   font-size: 30px;
 }
-.adminpage li a{
+.adminpagea{
+  position: fixed;
+  top: 5%;
+  left: 90%;
+  transform: translate(-50%, -50%);
   display: inline-block;
   color: rgb(54, 51, 62);
   text-decoration: none;
