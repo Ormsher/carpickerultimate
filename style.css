@@ -686,6 +686,11 @@ body {
   padding-left: 750px;
 
 }
+.mygtukaz button{
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
 
 
 /* ABOUT US */
