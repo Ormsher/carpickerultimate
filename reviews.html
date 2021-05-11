@@ -2,8 +2,12 @@
   <head>
     <title>Sportlux</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="./comments.css">
+    <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
   </head>
-  <body class="index">
+  <body class="abus">
     <header>
       <div class="row">
         <div class="logo">
@@ -18,14 +22,86 @@
           <li><a id="logout" href="#" onclick="logout()"></a></li>
         </ul>
       </div>
+
+    <div class="komentarai">
+      <!-- comments container -->
+    <div class="comment_block">
+      <!-- used by #{user} to create a new comment -->
+      <div class="create_new_comment">
+          <!-- current #{user} avatar -->
+          <div class="user_avatar">
+              <img src="./assets/people/avatar1.png">
+          </div><!-- the input field --><div class="input_comment">
+              <input type="text" placeholder="Rašykite komentarą...">
+          </div>
+      </div>
+
+      <!-- new comment -->
+      <div class="new_comment">
+          <!-- build comment -->
+          <ul class="user_comment">
+              <!-- current #{user} avatar -->
+              <div class="user_avatar">
+                  <img src="./assets/people/avatar2.png">
+              </div><!-- the comment body --><div class="comment_body">
+                  <p class="summary">Gera kokybė</p>
+              </div>
+              <!-- comments toolbar -->
+              <div class="comment_toolbar">
+                  <!-- inc. date and time -->
+                  <div class="comment_details">
+                      <ul>
+                          <li><i class="fa fa-clock-o"></i> 22:59</li>
+                          <li><i class="fa fa-calendar"></i> 2021-05-03</li>
+                          <li><i class="fa fa-pencil"></i> <span class="user">Ignė</span></li>
+                      </ul>
+                  </div><!-- inc. share/reply and love --><div class="comment_tools">
+                      <ul>
+                          <li><i class="fa fa-share-alt"></i></li>
+                          <li><i class="fa fa-reply"></i></li>
+                          <li><i class="fa fa-heart love"></i></li>
+                      </ul>
+                  </div>
+              </div>
+      </div>
+      <!-- end of comment -->
+      <!-- new comment -->
+      <div class="new_comment">
+          <!-- build comment -->
+          <ul class="user_comment">
+              <!-- current #{user} avatar -->
+              <div class="user_avatar">
+                  <img src="./assets/people/avatar1.png">
+              </div><!-- the comment body --><div class="comment_body">
+                  <p class="summary">6/10.</p>
+              </div>
+              <!-- comments toolbar -->
+              <div class="comment_toolbar">
+                  <!-- inc. date and time -->
+                  <div class="comment_details">
+                      <ul>
+                          <li><i class="fa fa-clock-o"></i> 13:18</li>
+                          <li><i class="fa fa-calendar"></i> 2021-05-04</li>
+                          <li><i class="fa fa-pencil"></i> <span class="user">Ignas</span></li>
+                      </ul>
+                  </div><!-- inc. share/reply and love --><div class="comment_tools">
+                      <ul>
+                          <li><i class="fa fa-share-alt"></i></li>
+                          <li><i class="fa fa-reply"></i></li>
+                          <li><i class="fa fa-heart love"></i></li>
+                      </ul>
+                  </div>
+              </div>
+      </div>
+      <!-- end of comment -->
+  </div>
+
+    </div>
+
+
+
       
     </body>
-      <div class="comment">
-      <a></a>
-      <div id="display"></div>
-      <textarea id="title" type="text "rows="5" cols="60" onkeyup="Allow()" placeholder="Jūsų komentaras"></textarea>
-      <input type="submit" value="Skelbti" onclick="insert()" style="width:50px;" /></form>
-      </div>
 
       <script type="text/javascript">
      //login system

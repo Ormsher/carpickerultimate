@@ -837,6 +837,13 @@ body {
   transform: translate(-50%, -50%);
 }
 
+.komentarai {
+  padding-top: 200px;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
 
 
 
