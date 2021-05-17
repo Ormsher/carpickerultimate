@@ -51,22 +51,27 @@
       if(color == "JU")
       {
         localStorage.setItem("spalva", "Juoda");
+        localStorage.setItem("spalvaKaina",2000);
       }
       else if(color == "ME")
       {
         localStorage.setItem("spalva", "Mėlyna");
+        localStorage.setItem("spalvaKaina",1700);
       }
       else if(color == "RA")
       {
         localStorage.setItem("spalva", "Raudona");
+        localStorage.setItem("spalvaKaina",2400);
       }
       else if(color == "SI")
       {
         localStorage.setItem("spalva", "Sidabrinė");
+        localStorage.setItem("spalvaKaina",1500);
       }
       else if(color == "BA")
       {
         localStorage.setItem("spalva", "Balta");
+        localStorage.setItem("spalvaKaina",3000);
       }
       else
       {
@@ -77,10 +82,12 @@
       if(wheels == "CY")
       {
         localStorage.setItem("ratai", "Cyberstream");
+        localStorage.setItem("rataiKaina",4200);
       }
       else if(wheels == "TU")
       {
         localStorage.setItem("ratai", "Turbine");
+        localStorage.setItem("rataiKaina",5400);
       }
       else
       {
@@ -91,14 +98,17 @@
       if(interior == "JU")
       {
         localStorage.setItem("interjeras", "Juodas");
+        localStorage.setItem("interjerasKaina",6700);
       }
       else if(interior == "BA")
       {
         localStorage.setItem("interjeras", "Baltas");
+        localStorage.setItem("interjerasKaina",7000);
       }
       else if(interior == "RI")
       {
         localStorage.setItem("interjeras", "Riešuto");
+        localStorage.setItem("interjerasKaina",7500);
       }
       else
       {
@@ -109,24 +119,28 @@
       if(engine == "ME")
       {
         localStorage.setItem("variklis", "Mėlynas");
+        localStorage.setItem("variklisKaina",17000);
       }
       else if(engine == "RA")
       {
         localStorage.setItem("variklis", "Raudonas");
+        localStorage.setItem("variklisKaina",20000);
       }
       else if(engine == "ZA")
       {
         localStorage.setItem("variklis", "Žalias");
+        localStorage.setItem("variklisKaina",25000);
       }
       else
       {
         alert("RIP VARIKLIS");
       }
-
+      var kaina=0;
       //INOVATION
       if(inovation == "TR")
       {
         localStorage.setItem("inovation", true);
+        kaina+=17000;
       }
       else
       {
@@ -138,12 +152,13 @@
       if(comfort == "TR")
       {
         localStorage.setItem("comfort", true);
+        kaina+=14000;
       }
       else
       {
         localStorage.setItem("comfort", false);
       }
-
+      localStorage.setItem("comfortKaina",kaina);
       //RACYJUMETRTR
       //JUTUJUMETRTR
     }
