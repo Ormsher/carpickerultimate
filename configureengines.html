@@ -1,0 +1,98 @@
+<html>
+  <head>
+    <title>Sportlux</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body class="configure">
+    <header>
+      <div class="row">
+        <div class="logo">
+          <img src="assets/SPORTLUX_2.2.gif" />
+        </div>
+
+        <ul class="main-nav">
+          <li ><a href="index.html"> Pradžia </a></li>
+          <li><a href="aboutus.html"> Apie mus </a></li>
+          <li class="active"><a href="configuremodel.html"> Užsakymas </a></li>
+          <li ><a id="login" href="loginpage.html"></a></li>
+          <li ><a id="warranty" href="warranty.html"></a></li>
+          <li><a id="logout" href="#" onclick="logout()"></a></li>
+        </ul>
+      </div>
+    </header>
+
+    
+
+    <div class="selectimageb">
+      <img id="currentmodely" src="assets/wheels/engblu.jpg" />
+    </div>
+    <div class="selectTitle"><h1>Model S</h1></div>
+    <div class="select">
+      <!-- <h1>Model X</h1> -->
+      <p>Variklis</p>
+      <a href="#"class="engbutred" onclick="pictureChange(1)"></a>
+      <a href="#"class="engbutblue" onclick="pictureChange(2)"></a>
+      <a href="#"class="engbutgreen" onclick="pictureChange(3)"></a>
+      <div class="engText">
+        <h1 id="galia"></h1>
+        <h1 id="variklisKaina"></h1>
+        <a id="buttonnext" href="configurecomforts.html" class="btn btn-one">TOLIAU</a>
+      </div>
+    </div>
+  </body>
+
+  <script>
+    //login system
+    if(localStorage.getItem("loginas")==null){
+      document.getElementById("login").innerText = "Prisijungti";
+      document.getElementById("logout").style.display = "none";
+      document.getElementById("warranty").style.display = "none";
+     } 
+     else{
+      document.getElementById("login").innerText = "Sveiki, " +localStorage.getItem("loginas");
+      document.getElementById("login").href="#";
+      document.getElementById("logout").style.display = "block";
+      document.getElementById("logout").innerText = "Atsijungti";
+      document.getElementById("warranty").innerText = "Garantija";
+      document.getElementById("warranty").style.display = "block";
+     }
+
+     function logout(){
+      localStorage.removeItem("loginas");
+      document.location.href = "index.html";
+     }
+
+    //hide next button
+    document.getElementById("buttonnext").style.display = "none";
+
+    //picture changer
+    function pictureChange(number) {
+
+      //unhide next button
+      document.getElementById("buttonnext").style.display = "block";
+
+      if (number == 1) {
+        document.getElementById("currentmodely").src = "assets/wheels/engred.jpg";
+        document.getElementById("galia").innerHTML="400HP";
+        localStorage.setItem("variklis","Raudonas");
+        localStorage.setItem("variklisKaina",20000);
+        document.getElementById("variklisKaina").innerHTML=20000 + " €";
+      }
+      if (number == 2) {
+        document.getElementById("currentmodely").src = "assets/wheels/engblu.jpg";
+        document.getElementById("galia").innerHTML="300HP";
+        localStorage.setItem("variklis","Mėlynas");
+        localStorage.setItem("variklisKaina",17000);
+        document.getElementById("variklisKaina").innerHTML=17000 + " €";
+      }
+      if (number == 3) {
+        document.getElementById("currentmodely").src = "assets/wheels/enggre.jpg";
+        document.getElementById("galia").innerHTML="500HP";
+        localStorage.setItem("variklis","Žalias");
+        localStorage.setItem("variklisKaina",25000);
+        document.getElementById("variklisKaina").innerHTML=25000 + " €";
+      }
+    }
+  </script>
+</html>

@@ -1,0 +1,167 @@
+<html>
+  <head>
+    <title>Sportlux</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body class="configure">
+    <header>
+      <div class="row">
+        <div class="logo">
+          <img src="assets/SPORTLUX_2.2.gif" />
+        </div>
+
+        <ul class="main-nav">
+          <li ><a href="index.html"> Pradžia </a></li>
+          <li><a href="aboutus.html"> Apie mus </a></li>
+          <li class="active"><a href="configuremodel.html"> Užsakymas </a></li>
+          <li ><a id="login" href="loginpage.html"></a></li>
+          <li ><a id="warranty" href="warranty.html"></a></li>
+          <li><a id="logout" href="#" onclick="logout()"></a></li>
+        </ul>
+      </div>
+    </header>
+
+    <div class="selectimage">
+      <img id="currentmodely" src="" />
+    </div>
+    <div class=selectTitle><h1>Model S</h1></div>
+    <div class="select">
+      <!-- <h1>Model X</h1> -->
+      <p>Ratai</p>
+      <div class="configurewheels">
+          <a href="#" onclick="buttonClick(1)">
+            <img id="20Cyberstream" src="assets/wheels/19Tempest.png" />
+          </a>
+          <a href="#" onclick="buttonClick(2)">
+            <img id="22Turbine" src="assets/wheels/21Arachnid.png" />
+          </a>
+      </div>
+      <div class="rataiText">
+        <h1 id="wheelText"></h1>
+        <h1 id="wheelPrice"></h1>
+        <a id="buttonnext" href="configureinteriors.html" class="btn btn-one">TOLIAU</a>
+      </div>
+    </div>
+  </body>
+
+  <script>
+    //login system
+    if(localStorage.getItem("loginas")==null){
+      document.getElementById("login").innerText = "Prisijungti";
+      document.getElementById("logout").style.display = "none";
+      document.getElementById("warranty").style.display = "none";
+     } 
+     else{
+      document.getElementById("login").innerText = "Sveiki, " +localStorage.getItem("loginas");
+      document.getElementById("login").href="#";
+      document.getElementById("logout").style.display = "block";
+      document.getElementById("logout").innerText = "Atsijungti";
+      document.getElementById("warranty").innerText = "Garantija";
+      document.getElementById("warranty").style.display = "block";
+     }
+
+     function logout(){
+      localStorage.removeItem("loginas");
+      document.location.href = "index.html";
+     }
+    
+        //hide next button
+        document.getElementById("buttonnext").style.display = "none";
+
+        //sync selected color
+        if(localStorage.getItem("spalva") == "Juoda"){
+            document.getElementById("currentmodely").src = "assets/wheels/sblack00.jpg";
+        }
+        if(localStorage.getItem("spalva") == "Mėlyna"){
+            document.getElementById("currentmodely").src = "assets/wheels/sblue00.jpg";
+        }
+        if(localStorage.getItem("spalva") == "Raudona"){
+            document.getElementById("currentmodely").src = "assets/wheels/sred00.jpg";
+        }
+        if(localStorage.getItem("spalva") == "Sidabrinė"){
+            document.getElementById("currentmodely").src = "assets/wheels/ssilver00.jpg";
+        }
+        if(localStorage.getItem("spalva") == "Balta"){
+            document.getElementById("currentmodely").src = "assets/wheels/swhite00.jpg";
+        }  
+
+        function buttonClick(number)
+        {
+            //unhide button
+            document.getElementById("buttonnext").style.display = "block";
+
+            if(number == 1 && localStorage.getItem("spalva") == "Juoda"){
+                document.getElementById("currentmodely").src = "assets/wheels/sblack00.jpg";
+                localStorage.setItem("ratai","Cyberstream");
+                localStorage.setItem("rataiKaina",4200);
+                document.getElementById("wheelPrice").innerHTML=4200 + " €";
+                document.getElementById("wheelText").innerHTML="Cyberstream";
+            }
+            if(number == 2 && localStorage.getItem("spalva") == "Juoda"){
+                document.getElementById("currentmodely").src = "assets/wheels/sblack20.jpg";
+                localStorage.setItem("ratai","Turbine");
+                document.getElementById("wheelText").innerHTML="Turbine";
+                localStorage.setItem("rataiKaina",5400);
+                document.getElementById("wheelPrice").innerHTML=5400 + " €";
+            }
+            if(number == 1 && localStorage.getItem("spalva") == "Mėlyna"){
+                document.getElementById("currentmodely").src = "assets/wheels/sblue00.jpg";
+                localStorage.setItem("ratai","Cyberstream");
+                document.getElementById("wheelText").innerHTML="Cyberstream";
+                localStorage.setItem("rataiKaina",4200);
+                document.getElementById("wheelPrice").innerHTML=4200 + " €";
+            }
+            if(number == 2 && localStorage.getItem("spalva") == "Mėlyna"){
+              document.getElementById("currentmodely").src = "assets/wheels/sblue20.jpg";
+                localStorage.setItem("ratai","Turbine");
+                document.getElementById("wheelText").innerHTML="Turbine";
+                localStorage.setItem("rataiKaina",5400);
+                document.getElementById("wheelPrice").innerHTML=5400 + " €";
+            }
+            if(number == 1 && localStorage.getItem("spalva") == "Raudona"){
+                document.getElementById("currentmodely").src = "assets/wheels/sred00.jpg";
+                localStorage.setItem("ratai","Cyberstream");
+                document.getElementById("wheelText").innerHTML="Cyberstream";
+                localStorage.setItem("rataiKaina",4200);
+                document.getElementById("wheelPrice").innerHTML=4200 + " €";
+            }
+            if(number == 2 && localStorage.getItem("spalva") == "Raudona"){
+                document.getElementById("currentmodely").src = "assets/wheels/sred20.jpg";
+                localStorage.setItem("ratai","Turbine");
+                document.getElementById("wheelText").innerHTML="Turbine";
+                localStorage.setItem("rataiKaina",5400);
+                document.getElementById("wheelPrice").innerHTML=5400 + " €";
+            }
+            if(number == 1 && localStorage.getItem("spalva") == "Sidabrinė"){
+                document.getElementById("currentmodely").src = "assets/wheels/ssilver00.jpg";
+                localStorage.setItem("ratai","Cyberstream");
+                document.getElementById("wheelText").innerHTML="Cyberstream";
+                localStorage.setItem("rataiKaina",4200);
+                document.getElementById("wheelPrice").innerHTML=4200 + " €";
+            }
+            if(number == 2 && localStorage.getItem("spalva") == "Sidabrinė"){
+                document.getElementById("currentmodely").src = "assets/wheels/ssilver20.jpg";
+                localStorage.setItem("ratai","Turbine");
+                document.getElementById("wheelText").innerHTML="Turbine";
+                localStorage.setItem("rataiKaina",5400);
+                document.getElementById("wheelPrice").innerHTML=5400 + " €";
+            }
+            if(number == 1 && localStorage.getItem("spalva") == "Balta"){
+                document.getElementById("currentmodely").src = "assets/wheels/swhite00.jpg";
+                localStorage.setItem("ratai","Cyberstream");
+                document.getElementById("wheelText").innerHTML="Cyberstream";
+                localStorage.setItem("rataiKaina",4200);
+                document.getElementById("wheelPrice").innerHTML=4200 + " €";
+            }
+            if(number == 2 && localStorage.getItem("spalva") == "Balta"){
+                document.getElementById("currentmodely").src = "assets/wheels/swhite20.jpg";
+                localStorage.setItem("ratai","Turbine");
+                document.getElementById("wheelText").innerHTML="Turbine";
+                localStorage.setItem("rataiKaina",5400);
+                document.getElementById("wheelPrice").innerHTML=5400 + " €";
+            }
+        }
+    
+  </script>
+</html>
