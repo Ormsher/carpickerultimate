@@ -23,7 +23,12 @@
         </ul>
       </div>
 
+      
+
     <div class="komentarai">
+        <div style="display: flex; justify-content:center; height: 1vh;">
+            <div class="widget" style="align-self: center;padding-bottom: 100px;"></div>
+            </div>
       <!-- comments container -->
     <div class="comment_block">
       <!-- used by #{user} to create a new comment -->
@@ -96,12 +101,148 @@
       <!-- end of comment -->
   </div>
 
+  
+  
+
+    
+
     </div>
 
 
 
       
     </body>
+
+    <style>
+        :root {
+  --starColor: #a5a5a5;
+  --starHighlightColor: #ffc107;
+  --successColor: #069a1c;
+  --starSize: 3rem;
+}
+
+@keyframes StarsIn {
+  0% {
+    background-color: var(--starColor);
+    transform: scale(1) rotate(0);
+    filter: brightness(100%);
+  }
+
+  50% {
+    background-color: var(--starHighlightColor);
+    transform: scale(1.3) rotate(5deg);
+    filter: brightness(110%);
+  }
+
+  100% {
+    background-color: var(--starHighlightColor);
+    transform: scale(1) rotate(0);
+    filter: brightness(100%);
+  }
+}
+
+@keyframes EmojiIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.5) translateY(0);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.5) translateY(-1rem);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(2) translateY(-3rem);
+  }
+}
+
+.star-rating-widget {
+  position: relative;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
+.star-rating-widget__btn {
+  position: relative;
+  display: inline-block;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+}
+
+.star-rating-widget__btn:focus,
+.star-rating-widget__btn-content:focus {
+  outline: none;
+}
+
+.star-rating-widget__btn-content {
+  display: inline-block;
+}
+
+.star-rating-widget__btn:focus>.star-rating-widget__btn-content {
+  box-shadow: 0 0 2px 2px var(--starHighlightColor);
+}
+
+.star-rating-widget__star {
+  display: inline-block;
+  width: var(--starSize);
+  height: var(--starSize);
+  background-color: var(--starColor);
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
+.star-rating-widget__btn--highlight .star-rating-widget__star {
+  background-color: var(--starHighlightColor);
+}
+
+.star-rating-widget__btn--animate .star-rating-widget__star {
+  animation: 0.2s ease-in both StarsIn;
+}
+
+.star-rating-widget__submitted {
+  position: absolute;
+  top: var(--starSize);
+  left: 0;
+  right: 0;
+  font-weight: bold;
+}
+
+.star-rating-widget__submitted>p {
+  color: var(--successColor);
+  margin: 0.5em 0;
+}
+
+
+.star-rating-widget--with-emojis .star-rating-widget__emoji {
+  content: attr(data-emoji);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  font-size: calc(var(--starSize) * 0.5);
+  pointer-events: none;
+  z-index: 10;
+}
+
+.star-rating-widget--with-emojis .star-rating-widget__btn--selected {
+  outline: none;
+}
+
+.star-rating-widget--with-emojis .star-rating-widget__btn--selected .star-rating-widget__emoji {
+  animation: 1s ease-in normal EmojiIn;
+}
+
+
+    </style>
+
 
       <script type="text/javascript">
      //login system
@@ -145,5 +286,124 @@
       messageBox.innerHTML = "";
       messageBox.innerHTML += " " + titles.join("<br/> ") + "<br/>";
       }
+
+
+      function starRatingWidget(
+  appendTo,
+  maxStars = 5,
+  emojis = ['😤', '😞', '🙂', '😀', '🤩']
+) {
+  const wrapper = document.querySelector([appendTo]);
+
+  if (!wrapper) return;
+
+  const highlightClass = 'star-rating-widget__btn--highlight';
+  const animateClass = 'star-rating-widget__btn--animate';
+  const widgetWrapper = document.createElement('div');
+  widgetWrapper.classList.add('star-rating-widget');
+
+  if (emojis.length) {
+    widgetWrapper.classList.add('star-rating-widget--with-emojis');
+  }
+
+  wrapper.innerHTML = '';
+  wrapper.insertAdjacentElement('beforeend', widgetWrapper);
+
+  function getEmoji(rating) {
+    const emojisPerStar = Math.ceil(maxStars / emojis.length);
+    const emojiIndex = Math.ceil(rating / emojisPerStar) - 1;
+
+    return emojis[emojiIndex];
+  }
+
+  function handleStarBtnClick(e) {
+    const starBtns = document.querySelectorAll('.star-rating-widget__btn');
+    const rating = e.currentTarget.dataset.rating;
+    const submittedClassName = '.star-rating-widget__submitted';
+
+    starBtns.forEach((btn, index) => {
+      index < rating
+        ? btn.classList.add(animateClass, highlightClass)
+        : btn.classList.remove(animateClass, highlightClass);
+    });
+
+    e.currentTarget.classList.add('star-rating-widget__btn--selected');
+
+    e.currentTarget.addEventListener('animationend', function (e) {
+      if (e.animationName === 'EmojiIn') {
+        e.currentTarget.classList.remove('star-rating-widget__btn--selected');
+      } else {
+        starBtns.forEach((btn) => {
+          btn.classList.remove(animateClass);
+        });
+      }
+    });
+
+    function handleSubmittedText() {
+      const widgetWrapper = document.querySelector('.star-rating-widget');
+      const submittedDiv = document.createElement('div');
+      const hasSubmittedDiv = document.querySelector([submittedClassName]);
+
+      function addSubmittedText() {
+        submittedDiv.classList.add('star-rating-widget__submitted');
+        submittedDiv.innerHTML = `<p role="alert">✓ Įvertinimas išsiųstas!</p>`;
+        widgetWrapper.insertAdjacentElement('beforeend', submittedDiv);
+      }
+
+      if (!hasSubmittedDiv) {
+        addSubmittedText();
+      } else {
+        hasSubmittedDiv.remove(setTimeout(addSubmittedText, 50));
+      }
+    }
+
+    handleSubmittedText();
+  }
+
+  function starBtnEvents() {
+    const starBtns = document.querySelectorAll('.star-rating-widget__btn');
+
+    starBtns.forEach((button) => {
+      button.addEventListener('click', handleStarBtnClick);
+    });
+  }
+
+  const buttons = Array.from({
+    length: maxStars,
+  })
+    .map((star, index) => {
+      return `<button type="button"
+          class="star-rating-widget__btn" data-rating=${index + 1}
+          aria-label="Give a rating of ${index + 1}">
+          <span class="star-rating-widget__btn-content" tabindex="-1">
+            <span class="star-rating-widget__star"
+              style=${`"animation-delay: ${index / (maxStars * 4)}s"`}
+              aria-hidden="true"></span>
+              ${
+                emojis.length
+                  ? `<span class="star-rating-widget__emoji" aria-hidden="true">
+                    ${emojis.length ? `${getEmoji(index + 1)}` : ''}
+                  </span>`
+                  : ''
+              }
+          </span>
+        </button>`;
+    })
+    .join('');
+
+  widgetWrapper.innerHTML = `${buttons}`;
+  starBtnEvents();
+}
+
+(function () {
+  starRatingWidget('.widget');
+})();
+
+
+
+
+
+
+
       </script>
 </html>
