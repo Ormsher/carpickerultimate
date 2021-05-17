@@ -101,7 +101,7 @@
 
         //         SHARE CODE GENERATOR
 
-        var color, wheels, interior, engine, inovation, comfort;
+        var color, wheels, interior, engine, inovation, comfort,model;
     if(localStorage.getItem("spalva") == "Juoda")
       {
         color = "JU";
@@ -197,8 +197,17 @@
       {
         comfort = "FL";
       }
+      //MODEL
+      if(localStorage.getItem("model") == "es")
+      {
+        model = "ES";
+      }
+      else
+      {
+        model = "EX";
+      }
 
-      var full = color + wheels + interior + engine + inovation + comfort;
+      var full = color + wheels + interior + engine + inovation + comfort+model;
       document.getElementById("SHARECODE").innerText = full;
 
 
