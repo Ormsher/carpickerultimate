@@ -881,7 +881,44 @@ body {
   transform: translate(-50%, -50%);
 }
 
-
+/* MODEL */
+.selectimages img{
+  width: 650px;
+  height: 250px;
+  position: fixed;
+  top: 50%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+}
+.selectimagex img{
+  position: fixed;
+  top: 50%;
+  left: 65%;
+  transform: translate(-50%, -50%);
+  width: 576px;
+  height: 324px;
+}
+.amodel {
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  font-size:30px;
+  position: fixed;
+  top: 30%;
+  left: 25%;
+}
+.bmodel {
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  font-size:30px;
+  position: fixed;
+  top: 30%;
+  left: 64%;
+}
+.importbtn{
+  position: fixed;
+  top: 80%;
+  left: 37%;
+}
 
 
 /* FADE IN EFFECTS */

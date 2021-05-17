@@ -1,0 +1,67 @@
+<html>
+  <head>
+    <title>Sportlux</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body class="configure">
+    <header>
+      <div class="row">
+        <div class="logo">
+          <img src="assets/SPORTLUX_2.2.gif" />
+        </div>
+
+        <ul class="main-nav">
+          <li ><a href="index.html"> Pradžia </a></li>
+          <li><a href="aboutus.html"> Apie mus </a></li>
+          <li class="active"><a href="configurecolor.html"> Užsakymas </a></li>
+          <li ><a id="login" href="loginpage.html"></a></li>
+          <li ><a id="warranty" href="warranty.html"></a></li>
+          <li><a id="logout" href="#" onclick="logout()"></a></li>
+        </ul>
+      </div>
+    </header>
+
+    <div class="selectimagex">
+      <a class="bmodel">MODEL X</a>
+      <a class="modelselect" href="configurecolorx.html"><img src="assets/wheels/xwhite00.jpg" /></a>
+      </div>
+      <div class="selectimages">
+        <a class="amodel">MODEL S</a>
+     <a class="modelselect" href="configurecolors.html"> <img src="assets/wheels/swhite00.jpg" /></a>
+    </div>
+    <div class="importbtn"><a id="buttonnext" href="shareimport.html" class="btn btn-one">Importuoti užsakymą</a></div>
+    
+  </body>
+
+  <script>
+    //login system
+     if(localStorage.getItem("loginas")==null){
+      document.getElementById("login").innerText = "Prisijungti";
+      document.getElementById("logout").style.display = "none";
+      document.getElementById("warranty").style.display = "none";
+     } 
+     else{
+      document.getElementById("login").innerText = "Sveiki, " +localStorage.getItem("loginas");
+      document.getElementById("login").href="#";
+      document.getElementById("logout").style.display = "block";
+      document.getElementById("logout").innerText = "Atsijungti";
+      document.getElementById("warranty").innerText = "Garantija";
+      document.getElementById("warranty").style.display = "block";
+     }
+
+     function logout(){
+      localStorage.removeItem("loginas");
+      document.location.href = "index.html";
+     }
+     
+
+    //picture changer
+    function pictureChange(number) {
+
+      //unhide next button
+      document.getElementById("buttonnext").style.display = "block";
+
+    }
+  </script>
+</html>
