@@ -730,7 +730,7 @@ body {
 .vilniusaboutus {
   position: fixed;
   top: 60%;
-  left: 75%;
+  left: 60%;
   transform: translate(-50%, -50%);
   /* border-style: dashed; */
   font-family: "Roboto", sans-serif;
@@ -756,7 +756,7 @@ body {
 .kaunasaboutus {
   position: fixed;
   top: 60%;
-  left: 25%;
+  left: 40%;
   transform: translate(-50%, -50%);
   /* border-style: dashed; */
   font-family: "Roboto", sans-serif;
